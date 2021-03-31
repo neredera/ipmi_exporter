@@ -1,0 +1,20 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: build
+  image: plugins/docker
+#  image: nere.dev/d-hub/plugins/docker:latest
+#  commands:
+#  - make
+#  - make build tarball
+#  - make docker
+#   path: "ipmi_exporter-*.tar.gz"
+  settings:
+#    mirror: https://nere.dev/d-int
+    repo: nere.dev/d-int/ipmi_exporter
+    registry: nere.dev/d-int
+    tags:
+      - latest
+      - '1.3.2'
