@@ -4,7 +4,7 @@ ADD . /go/src/github.com/soundcloud/ipmi_exporter/
 RUN cd /go/src/github.com/soundcloud/ipmi_exporter && make
 
 # Container image
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 WORKDIR /
 RUN apt-get update \
     && apt-get install freeipmi-tools -y --no-install-recommends \
